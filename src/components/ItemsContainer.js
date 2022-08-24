@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import { getData } from './apicalls.js'
 
 export const ItemsContainer = () => {
   const [items, setItems] = useState([])
   const { id } = useParams()
 
-  useEffect(() => {
-    axios.get('http://localhost:3001/api/v1/users/' + id + '/items.json')
-      .then(response => {
-        console.log(response)
-        setItems(response.data)
-      })
-      .catch(error => console.log(error))
-  }, [id])
+  useEffect(() => { getData(process.env.REACT_APP_BASE_URL + '/' + id + '/items.json').then((response) => setItems(response)) }, [id])
 
   return (
     <div>
