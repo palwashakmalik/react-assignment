@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
-import { getData } from './apicalls.js'
+import { getUsers } from './api/request.js'
 
 export const UsersContainer = () => {
   const [users, setUsers] = useState([])
 
-  useEffect(() => { getData((process.env.REACT_APP_BASE_URL + '.json')).then((response) => setUsers(response)) }, [])
+  useEffect(() => { getUsers().then((response) => setUsers(response)) }, [])
 
   return (
     <div>
