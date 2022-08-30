@@ -7,3 +7,9 @@
 .App-intro {
   font-size: large;
 }
+
+.user-card {
+  width: 18rem;
+  padding: 10px;
+  margin: 20px
+}

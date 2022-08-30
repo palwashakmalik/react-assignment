@@ -1,25 +1,16 @@
+import Routers from './Routers'
+import { BrowserRouter } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
-import UsersContainer from './components/UsersContainer'
-import ItemsContainer from './components/ItemsContainer'
-import React, { Component } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-class App extends Component {
-  render () {
-    return (
-      <BrowserRouter>
-        <div className='App'>
-          <div className='App-header'>
-            <h1>React Assignment</h1>
-          </div>
-          <Routes>
-            <Route exact path='/' element={<UsersContainer />} />
-            <Route path='/users/:id' element={<ItemsContainer />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    )
-  }
-}
-
+const App = () => (
+  <BrowserRouter>
+    <div className='App'>
+      <div className='App-header'>
+        <h1>React Assignment</h1>
+        <Routers />
+      </div>
+    </div>
+  </BrowserRouter>
+)
 export default App

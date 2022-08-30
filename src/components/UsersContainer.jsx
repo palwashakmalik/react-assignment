@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
 import { getUsers } from './api/request.js'
@@ -15,8 +14,7 @@ export const UsersContainer = () => {
       <div className='d-flex flex-wrap'>
         {users.map((user) => {
           return (
-            <Card style={{ width: '18rem', padding: '10px', margin: '20px' }} key={user.id}>
-              <Card.Img variant='top' src="" />
+            <Card className='user-card' key={user.id}>
               <Card.Body>
                 <Card.Title>{user.name}</Card.Title>
                 <Card.Text>

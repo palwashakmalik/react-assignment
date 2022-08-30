@@ -22,7 +22,7 @@ export const ItemsContainer = () => {
           {
             items.map((item) => {
               return (
-                <tr key={item.item_name}>
+                <tr key={item.id}>
                   <td>{item.item_name} </td>
                   <td>{item.points} </td>
                 </tr>
