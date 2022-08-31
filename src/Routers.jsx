@@ -1,6 +1,6 @@
 
-import UsersContainer from './components/UsersContainer'
-import ItemsContainer from './components/ItemsContainer'
+import { UsersContainer } from './components/UsersContainer'
+import { ItemsContainer } from './components/ItemsContainer'
 import { Routes, Route } from 'react-router-dom'
 
 const Routers = () => (

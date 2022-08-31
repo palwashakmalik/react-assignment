@@ -33,5 +33,3 @@ export const UsersContainer = () => {
     </div>
   )
 }
-
-export default UsersContainer

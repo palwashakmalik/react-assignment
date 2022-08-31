@@ -19,19 +19,14 @@ export const ItemsContainer = () => {
           </tr>
         </thead>
         <tbody>
-          {
-            items.map((item) => {
-              return (
-                <tr key={item.id}>
-                  <td>{item.item_name} </td>
-                  <td>{item.points} </td>
-                </tr>
-              )
-            })
-          }
+          {items.map((item) => (
+            <tr key={item.id}>
+              <td>{item.item_name} </td>
+              <td>{item.points} </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
   )
 }
-export default ItemsContainer
