@@ -1,0 +1,15 @@
+.App-header {
+  text-align: center;
+  height: 150px;
+  padding: 20px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.user-card {
+  width: 18rem;
+  padding: 10px;
+  margin: 20px
+}
